@@ -21,7 +21,14 @@ local actions = {
     end,
     navigateDown = function()
         vscode.action('workbench.action.navigateDown')
+    end,
+    nextTab = function()
+        vscode.action("workbench.action.nextEditor")
+    end,
+    prevTab = function()
+        vscode.action("workbench.action.previousEditor")
     end
+
 }
 
 
@@ -32,3 +39,5 @@ vim.keymap.set({ 'n' }, '<C-h>', actions.navigateLeft)
 vim.keymap.set({ 'n' }, '<C-l>', actions.navigateRight)
 vim.keymap.set({ 'n' }, '<C-j>', actions.navigateDown)
 vim.keymap.set({ 'n' }, '<C-k>', actions.navigateUp)
+vim.keymap.set({ 'n' }, '<Tab>', actions.nextTab)
+vim.keymap.set({ 'n' }, '<S-Tab>', actions.prevTab)
