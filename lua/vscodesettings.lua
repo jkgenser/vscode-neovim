@@ -34,13 +34,21 @@ local actions = {
     vSplit = function()
         vscode.action("workbench.action.splitEditorDown")
     end,
-
+    toggleMinimap = function()
+        vscode.action("editor.action.toggleMinimap")
+    end,
+    toggleActivityBar = function()
+        vscode.action("workbench.action.toggleSidebarVisibility")
+    end
 }
+
 
 
 vim.keymap.set({ 'n' }, '<leader>x', actions.closeActiveEditor)
 vim.keymap.set({ 'n' }, '<leader>e', actions.showExplorer)
 vim.keymap.set({ 'n' }, '<leader>b', actions.toggleSidebar)
+vim.keymap.set({ 'n' }, '<leader>m', actions.toggleMinimap)
+vim.keymap.set({ 'n' }, '<leader>a', actions.toggleActivityBar)
 vim.keymap.set({ 'n' }, '<C-h>', actions.navigateLeft)
 vim.keymap.set({ 'n' }, '<C-l>', actions.navigateRight)
 vim.keymap.set({ 'n' }, '<C-j>', actions.navigateDown)
