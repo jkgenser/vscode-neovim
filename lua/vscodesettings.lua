@@ -39,7 +39,15 @@ local actions = {
     end,
     toggleActivityBar = function()
         vscode.action("workbench.action.toggleSidebarVisibility")
-    end
+    end,
+    goToReferences = function()
+        vscode.action("editor.action.goTojjReferences")
+    end,
+    peekDefinition = function()
+        vscode.action("editor.action.peekDefinition")
+    end,
+
+
 }
 
 
@@ -57,3 +65,5 @@ vim.keymap.set({ 'n' }, '<Tab>', actions.nextTab)
 vim.keymap.set({ 'n' }, '<S-Tab>', actions.prevTab)
 vim.keymap.set({ 'n' }, '<leader>h', actions.hSplit)
 vim.keymap.set({ 'n' }, '<leader>v', actions.vSplit)
+vim.keymap.set({ 'n' }, 'gr', actions.goToReferences)
+vim.keymap.set({ 'n' }, 'gD', actions.peekDefinition)
