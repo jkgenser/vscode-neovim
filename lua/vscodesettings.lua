@@ -28,10 +28,10 @@ local actions = {
     prevTab = function()
         vscode.action("workbench.action.previousEditor")
     end,
-    hSplit = function()
+    vSplit = function()
         vscode.action("workbench.action.splitEditor")
     end,
-    vSplit = function()
+    hSplit = function()
         vscode.action("workbench.action.splitEditorDown")
     end,
     toggleMinimap = function()
