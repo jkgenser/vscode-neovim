@@ -41,7 +41,7 @@ local actions = {
         vscode.action("workbench.action.toggleSidebarVisibility")
     end,
     goToReferences = function()
-        vscode.action("editor.action.goTojjReferences")
+        vscode.action("editor.action.goToReferences")
     end,
     peekDefinition = function()
         vscode.action("editor.action.peekDefinition")
